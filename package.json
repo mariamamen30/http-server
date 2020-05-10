@@ -1,0 +1,24 @@
+{
+  "name": "http-server",
+  "version": "1.0.0",
+  "description": "a simple http server",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node .",
+    "dev": "nodemon ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mariamamen30/http-server.git"
+  },
+  "author": "mariam",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mariamamen30/http-server/issues"
+  },
+  "homepage": "https://github.com/mariamamen30/http-server#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.3"
+  }
+}
