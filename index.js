@@ -1,5 +1,6 @@
 const http = require("http");
 const fs = require("fs");
+const filePath = "./ToDo List.json";
 
 const hostname = "127.0.0.1";
 const port = 3000;
@@ -8,6 +9,7 @@ const server = http.createServer((req, res) => {
   switch (req.url) {
     case "/":
       res.setHeader("Content-Type", "text/html");
+      const db = JSON.parse(fs.readFileSync(filePath, "utf8"));
       res.end(` <head>
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -20,8 +22,12 @@ const server = http.createServer((req, res) => {
   
         <h3>Your To-Do List</h3>
         <ol>
-          <li>mama</li>
-          <li>baba</li>
+          <li>${db[0].title}</li>
+          <li>${db[1].title}</li>
+          <li>${db[2].title}</li>
+          <li>${db[3].title}</li>
+          <li>${db[4].title}</li>
+          
         </ol>
   
         <div class="links">
