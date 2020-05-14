@@ -22,11 +22,10 @@ const server = http.createServer((req, res) => {
   
         <h3>Your To-Do List</h3>
         <ol>
-          <li>${db[0].title}</li>
-          <li>${db[1].title}</li>
-          <li>${db[2].title}</li>
-          <li>${db[3].title}</li>
-          <li>${db[4].title}</li>
+          
+          ${db.forEach(element => {
+            `<li>${element.title}</li>`;
+          })}
           
         </ol>
   
